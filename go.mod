@@ -3,6 +3,7 @@ module github.com/archey347/goping
 go 1.18
 
 require (
+	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf // indirect
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
 	github.com/go-chi/chi/v5 v5.0.10 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect

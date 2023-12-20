@@ -1,0 +1,11 @@
+[Unit]
+Description=HTTP Ping
+
+[Service]
+Type=notify
+ExecStart=/usr/local/bin/goping-api
+WatchdogSec=30s
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

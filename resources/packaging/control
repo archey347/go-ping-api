@@ -3,3 +3,5 @@ Version: 0.0
 Maintainer: Archey Barrell
 Architecture: amd64
 Description: A basic http api written in go
+Depends: systemd
+Provides: goping-api

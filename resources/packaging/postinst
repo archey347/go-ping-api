@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+case "$1" in
+    configure)
+        # Enable and start the service on installation
+        systemctl enable goping-api
+        systemctl start goping-api || true
+        ;;
+esac
+
+exit 0
