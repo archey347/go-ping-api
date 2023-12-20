@@ -39,6 +39,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./goping-amd64-${{ github.ref }}.deb
-        asset_name: goping-amd64-${{ github.ref }}.deb
+        asset_path: ./goping-amd64-${{ env.BUILD_VERSION }}.deb
+        asset_name: goping-amd64.deb
         asset_content_type: application/x-deb
