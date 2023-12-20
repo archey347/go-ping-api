@@ -19,5 +19,3 @@ This will run using the config file in `./resources/configs/goping-api.yaml`
 `make package`
 
 Only `.deb` packaging is supported. Is outputed to the root of the repository.
-
-Note that this package does not include the appropriate files to make it a system service (yet).

@@ -1,5 +1,5 @@
 Package: goping
-Version: 0.0
+Version: 0.1
 Maintainer: Archey Barrell
 Architecture: amd64
 Description: A basic http api written in go
