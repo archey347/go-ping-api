@@ -1,6 +1,6 @@
 ## goping
 
-`goping` is a basic http api that serves pong when you request `/GET`. This project serves no specific purpose, other than as a learning exercise for myself on how to structure go projects.
+`goping` is a basic http api that serves pong (just the word, not a nasty smell!) when you request `/GET`. This project serves no specific purpose, other than as a learning exercise for myself on how to structure go projects.
 
 Uses zap logging, viper config management, and chi.
 
