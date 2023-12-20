@@ -20,7 +20,11 @@ package: build
 	cp -r resources/systemd/goping-api.service package/etc/systemd/system/goping-api.service
 	dpkg-deb --build package goping-amd64-$(build_version).deb
 	rm -rf package
+
+install: goping-amd64-$(build_version).deb
+	dpkg -i goping-amd64-$(build_version).deb
 	
 clean:
 	go clean
 	rm -r ./bin
+	rm -r ./goping-amd64-$(build_version).deb
