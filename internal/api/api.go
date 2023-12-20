@@ -2,16 +2,19 @@ package api
 
 import (
 	"net/http"
+	"strconv"
 
-	"github.com/go-chi/chi/v5"
+	"github.com/archey347/goping/internal/api/routes"
+	"github.com/archey347/goping/internal/config"
+	"go.uber.org/zap"
 )
 
-func Start() {
-	r := chi.NewRouter()
+func Start(c config.Config, l *zap.Logger) {
+	r := routes.GetRouter()
 
-	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("welcome"))
-	})
+	connectionBinding := ":" + strconv.Itoa(c.ApiServer.Port)
 
-	http.ListenAndServe(":3000", r)
+	l.Info("Starting http server with binding " + connectionBinding)
+
+	http.ListenAndServe(connectionBinding, r)
 }

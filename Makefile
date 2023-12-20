@@ -5,7 +5,7 @@ build:
 	go build -o bin/goping-api cmd/goping-api/main.go
 
 run: build
-	./bin/goping-api
+	./bin/goping-api --config ./resources/configs/goping-api.yaml
 
 clean:
 	go clean
