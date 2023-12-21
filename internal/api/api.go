@@ -15,7 +15,7 @@ import (
 func Start(c config.Config, l *zap.Logger) {
 	router := routes.GetRouter()
 
-	connectionBinding := ":" + strconv.Itoa(c.ApiServer.Port)
+	connectionBinding := c.ApiServer.Address + ":" + strconv.Itoa(c.ApiServer.Port)
 
 	l.Info("Starting http server with binding " + connectionBinding)
 
